@@ -1,3 +1,6 @@
+/*!*************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[3]!./app/globals.css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************/
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 :root {
@@ -53,9 +56,11 @@ body {
 
 /* ─── NAVBAR ─── */
 .navbar {
+  position: -webkit-sticky;
   position: sticky; top: 0; z-index: 100;
   background: rgba(7,12,26,0.85);
-  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+          backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
 }
 .navbar-inner {
@@ -171,7 +176,8 @@ body {
   border: 1px solid var(--border);
   border-radius: var(--r-lg);
   padding: 28px;
-  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .card-hover:hover {
@@ -270,8 +276,8 @@ body {
 .checklist-ref { font-size: 11px; color: var(--text3); margin-top: 4px; }
 
 /* ─── GRID ─── */
-.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: 20px; gap: 20px; }
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); grid-gap: 20px; gap: 20px; }
 @media (max-width: 768px) {
   .grid-3 { grid-template-columns: 1fr; }
   .grid-2 { grid-template-columns: 1fr; }
@@ -330,7 +336,7 @@ body {
   transition: all 0.2s;
 }
 .history-item:hover { border-color: var(--border2); background: var(--card-hover); }
-.history-item-left { display: flex; align-items: center; gap: 14px; flex: 1; min-width: 0; }
+.history-item-left { display: flex; align-items: center; gap: 14px; flex: 1 1; min-width: 0; }
 .history-type-icon {
   width: 40px; height: 40px; border-radius: var(--r-sm);
   display: flex; align-items: center; justify-content: center;
@@ -371,3 +377,4 @@ body {
 .icon-aman { background: var(--aman-bg); border: 2px solid var(--aman-border); }
 .icon-warn { background: var(--warn-bg); border: 2px solid var(--warn-border); }
 .icon-danger { background: var(--danger-bg); border: 2px solid var(--danger-border); }
+
